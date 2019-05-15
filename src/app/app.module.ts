@@ -11,6 +11,8 @@ import { DashboardComponent } from './pages/dashboard/dashboard.component';
 import { HeaderComponent } from './shared/header/header.component';
 import { SidebarComponent } from './shared/sidebar/sidebar.component';
 import { BreadcrumbsComponent } from './shared/breadcrumbs/breadcrumbs.component';
+import { PagesComponent } from './pages/pages.component';
+import { RegistroComponent } from './registro/registro.component';
 
 
 @NgModule({
@@ -21,7 +23,9 @@ import { BreadcrumbsComponent } from './shared/breadcrumbs/breadcrumbs.component
     DashboardComponent,
     HeaderComponent,
     SidebarComponent,
-    BreadcrumbsComponent
+    BreadcrumbsComponent,
+    PagesComponent,
+    RegistroComponent
   ],
   imports: [
     BrowserModule,
