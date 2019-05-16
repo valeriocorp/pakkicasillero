@@ -5,5 +5,15 @@ import { Injectable } from '@angular/core';
 })
 export class SidebarService {
 
+  menu : any = [
+
+    {titulo: 'Principal',
+    icono: 'description',
+    submenu: [
+      {titulo:'Dashboard', url: '/dashboard'},
+    ]
+  }
+  ];
+
   constructor() { }
 }
