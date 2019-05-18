@@ -11,6 +11,7 @@ export class SidebarService {
     icono: 'description',
     submenu: [
       {titulo:'Dashboard', url: '/dashboard'},
+      
     ]
   }
   ];
