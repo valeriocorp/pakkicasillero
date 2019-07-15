@@ -3,14 +3,17 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { PagesComponent } from './pages.component';
 import { SharedModule } from '../shared/shared.module';
 import { PAGES_ROUTES } from './pages.routes';
-
-
+import { PipesModule } from '../pipes/pipes.module';
+import { ProfileComponent } from './profile/profile.component';
+import { FormsModule } from '@angular/forms';
+import { CommonModule } from '@angular/common';
 
 
 @NgModule({
     declarations:[
         PagesComponent,
-        DashboardComponent
+        DashboardComponent,
+        ProfileComponent
     ],
     exports:[
 
@@ -18,7 +21,10 @@ import { PAGES_ROUTES } from './pages.routes';
     ],
     imports:[
         SharedModule,
-        PAGES_ROUTES
+        PAGES_ROUTES,
+        PipesModule,
+        FormsModule,
+        CommonModule
     ]
 })
 

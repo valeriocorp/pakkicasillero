@@ -12,7 +12,7 @@ export class LoginGuardGuard implements CanActivate {
     public router: Router){}
   canActivate(){
 
-    if (this.usuarioService.estaogeado()) {
+    if (this.usuarioService.estaLogeado()) {
       console.log('Paso el guard');
       return true;
       
@@ -25,3 +25,4 @@ export class LoginGuardGuard implements CanActivate {
   }
   
 }
+

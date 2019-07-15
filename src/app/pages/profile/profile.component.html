@@ -1,0 +1,134 @@
+<div class="row animated fadeIn">
+  <div class="col-md-8">
+    <div class="card">
+      <div class="card-header card-header-icon card-header-warning">
+        <div class="card-icon">
+          <i class="material-icons">perm_identity</i>
+        </div>
+        <h4 class="card-title">Edita tu perfil -
+          <small class="category">Completa tu perfil</small>
+        </h4>
+      </div>
+      <div class="card-body">
+
+        <form ngNativeValidate #f="ngForm" (ngSubmit)="guardar(f.value)">
+          <div class="row">
+            <div class="col-md-5">
+
+              <div class="form-group">
+                <label class="bmd-label-floating">Email</label>
+                <input [ngModel]="usuario.email" [disabled]="usuario.google" name="email" type="text" class="form-control" >
+              </div>
+            </div>
+            <div class="col-md-5">
+              <div class="form-group">
+                <label class="bmd-label-floating">Casillero</label>
+                <input type="text" [ngModel]="usuario.casillero" name="casillero" class="form-control" >
+              </div>
+            </div>
+           
+          </div>
+          <div class="row">
+            <div class="col-md-6">
+              <div class="form-group">
+                <label class="bmd-label-floating">Nombre</label>
+                <input type="text" [ngModel]="usuario.nombre" name="nombre" class="form-control">
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="form-group">
+                <label class="bmd-label-floating">Apellido</label>
+                <input type="text" [ngModel]="usuario.apellido" name="apellido" class="form-control">
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-12">
+              <div class="form-group">
+                <label class="bmd-label-floating">Direccion</label>
+                <input type="text" [ngModel]="usuario.direccion" name="direccion" class="form-control">
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-4">
+              <div class="form-group">
+                <label class="bmd-label-floating">Telefono</label>
+                <input type="text" [ngModel]="usuario.telefono" name="telefono" class="form-control">
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="form-group">
+                <label class="bmd-label-floating">Fecha Nacimiento</label>
+                <input type="text" [ngModel]="usuario.fechaNacimiento" name="fechaNacimiento" class="form-control">
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="form-group">
+                <label class="bmd-label-floating">Genero</label>
+                <input type="text" [ngModel]="usuario.genero" name="genero" class="form-control">
+              </div>
+            </div>
+          </div>
+          <div class="row">
+              <div class="col-md-5">
+                  <div class="form-group">
+                    <label class="bmd-label-floating">Tipo Documento</label>
+                    <input type="text" [ngModel]="usuario.tipoDocumento" name="tipoDocumento" class="form-control">
+                  </div>
+                </div>
+                <div class="col-md-5">
+                  <div class="form-group">
+                    <label class="bmd-label-floating">Documento</label>
+                    <input type="text" [ngModel]="usuario.documento" name="documento" class="form-control">
+                  </div>
+                </div>
+               
+            
+          </div>
+          <div class="row">
+              <div class="col-md-12">
+                <div class="form-group">
+                  <label class="bmd-label-floating">Intereses</label>
+                  <input type="text" [ngModel]="usuario.intereses" name="intereses" class="form-control">
+                </div>
+              </div>
+            </div>
+          <button type="submit" class="btn btn-warning pull-right">Actualizar perfil</button>
+          <div class="clearfix"></div>
+        </form>
+
+      </div>
+    </div>
+  </div>
+
+  
+  <div class="col-md-3 col-sm-8">
+      <div class="card">
+      <h4 class="text-center">Imagen de perfil</h4>
+      <div class="fileinput fileinput-new text-center" data-provides="fileinput">
+        <div class="fileinput-new thumbnail img-circle">
+          <img [src]="usuario.img | imagen" alt="...">
+        </div>
+        <div class="fileinput-preview fileinput-exists thumbnail img-circle"></div>
+        <div>
+          <span class="btn btn-round btn-warning btn-file">
+            <span class="fileinput-new">Agregar foto</span>
+            <span  class="fileinput-exists">Cambiar por otra</span>
+            <input (change)="seleccionImagen($event.target.files[0])" type="file" name="..." />
+          </span>
+          <br />
+          <button (click)="cambiarImagen()" *ngIf="imagenSubir" type="submit" class="btn btn-warning ">Actualizar foto</button>
+          <a href="#pablo" class="btn btn-danger btn-round fileinput-exists" data-dismiss="fileinput"><i class="fa fa-times"></i> Eliminar</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+	

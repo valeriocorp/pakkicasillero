@@ -2,6 +2,7 @@ import {RouterModule, Routes} from '@angular/router'
 import { PagesComponent } from './pages.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { LoginGuardGuard } from '../services/guards/login-guard.guard';
+import { ProfileComponent } from './profile/profile.component';
 
 
 
@@ -16,6 +17,11 @@ const pagesRoutes:Routes = [
             {
                 path:'dashboard',
                 component: DashboardComponent
+            },
+            {
+                path:'perfil',
+                component: ProfileComponent,
+                data: {titulo:'Perfil de usuario Pakki'}
             },
             {
                 path:'',

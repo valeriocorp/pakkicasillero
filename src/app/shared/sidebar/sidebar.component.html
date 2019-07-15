@@ -15,19 +15,19 @@
   <div class="sidebar-wrapper">
     <div class="user">
       <div class="photo">
-        <img src="../assets/img/faces/avatar.jpg" />
+        <img [src]="usuario.img | imagen" />
       </div>
       <div class="user-info">
         <a data-toggle="collapse" href="#collapseExample" class="username">
           <span>
-            Tania Andrew
+            {{usuario.nombre}}
             <b class="caret"></b>
           </span>
         </a>
         <div class="collapse" id="collapseExample">
           <ul class="nav">
             <li class="nav-item">
-              <a class="nav-link" routerLinkActive="active" routerLink="/dashboard">
+              <a class="nav-link" routerLinkActive="active" routerLink="/perfil">
                 <span class="sidebar-mini"> MP </span>
                 <span class="sidebar-normal"> Mi Perfil </span>
               </a>
