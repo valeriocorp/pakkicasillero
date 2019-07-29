@@ -32,18 +32,7 @@
                 <span class="sidebar-normal"> Mi Perfil </span>
               </a>
             </li>
-            <li class="nav-item">
-              <a class="nav-link" routerLinkActive="active" routerLink="/dashboard">
-                <span class="sidebar-mini"> EP </span>
-                <span class="sidebar-normal"> Editar Perfil </span>
-              </a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" routerLinkActive="active" routerLink="/dashboard">
-                <span class="sidebar-mini"> S </span>
-                <span class="sidebar-normal"> Configuraciones </span>
-              </a>
-            </li>
+          
             <li  class="nav-item">
                 <a class="nav-link pointer" (click)="usuarioService.logout()">
                   <span class="sidebar-mini"> c </span>
@@ -54,35 +43,31 @@
         </div>
       </div>
     </div>
-    <ul class="nav">
-        <li class="nav-item ">
-          <a class="nav-link" href="../examples/dashboard.html">
-            <i class="material-icons">dashboard</i>
-            <p> Menu </p>
-          </a>
-        </li>
-        <li *ngFor="let menu of sidebar.menu" class="nav-item ">
-          <a class="nav-link" data-toggle="collapse" href="#pagesExamples">
+    <ul  class="nav">
+   
+        <li *ngFor="let menu of sidebar.menu"  class="nav-item ">
+          <a  class="nav-link" data-toggle="collapse" href="#{{menu.titulo}}">
             <i class="material-icons">{{menu.icono}}</i>
             <p> {{menu.titulo}}
               <b class="caret"></b>
             </p>
           </a>
-          <div class="collapse" id="pagesExamples">
-            <ul class="nav">
+          <div  class="collapse" id="{{menu.titulo}}">
+           
   
               <li *ngFor="let submenu of menu.submenu" class="nav-item ">
                 <a class="nav-link" routerLinkActive="active" [routerLink]="[submenu.url]">
-                  <span class="sidebar-mini"> D </span>
+                  <span class="sidebar-mini"> • </span>
                   <span class="sidebar-normal"> {{submenu.titulo}} </span>
                 </a>
               </li>
-
-
-            </ul>
+  
+  
+           
           </div>
+   
         </li>
-        
+      
       </ul>
   
   </div>

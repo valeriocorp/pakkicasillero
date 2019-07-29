@@ -1,3 +1,112 @@
-<p>
-  dashboard works!
-</p>
+<div class="content">
+    <div class="content">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="card ">
+              <div class="card-header card-header-success card-header-icon">
+                <div class="card-icon">
+                  <i class="material-icons"></i>
+                </div>
+                <h4 class="card-title">Aqui va la publicidad</h4>
+              </div>
+              <div class="card-body ">
+                
+                  <div class="col-sm-12 col-md-12 col-lg-12">
+                    
+                        <img src="../../../assets/img/Publicidad.jpg" class="responsive">
+                      </div>
+                    
+                      
+                      </div>
+                      </div>
+                      </div>
+                    </div>
+                    <!-- <button type="button" class="btn btn-round btn-default dropdown-toggle btn-link" data-toggle="dropdown">
+7 days
+</button> -->
+                    <div class="row">
+                      <div class="col-md-4">
+                        <div class="card card-chart">
+                          <div class="card-header card-header-rose" data-header-animation="true">
+                            <h4>
+                              Paquetes
+                            </h4>
+                          </div>
+                          <div class="card-body">
+                            <div class="card-actions">
+                              
+                              <button type="button" class="btn btn-info btn-link" rel="tooltip" data-placement="bottom" title="Refresh">
+                                <i class="material-icons">refresh</i>
+                              </button>
+                              <button type="button" class="btn btn-default btn-link" rel="tooltip" data-placement="bottom" title="Crear prealerta">
+                                <i class="material-icons">edit</i>
+                              </button>
+                            </div>
+                            <h4 class="card-title">No tienes paquetes!!!</h4>
+                            
+                          </div>
+                          <div class="card-footer">
+                            <div class="stats">
+                              <i class="material-icons">access_time</i> para crear prealerta dale click en el lapiz
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-md-4">
+                        <div class="card card-chart">
+                          <div class="card-header card-header-success" data-header-animation="false">
+                            <h4>
+                              Informacion casillero
+                            </h4>
+                          </div>
+                          <div class="card-body">
+                           
+                            <h4 class="card-title text-center">Nombre: {{usuario.nombre}} {{usuario.apellido}}  {{usuario.casillero}}</h4>
+                            <div >
+                                <h5 class="text-center">Dirrecion: 10900 NW 21st Suite </h5>
+                                <h5 class="text-center">Suite 220</h5>
+                                <h5 class="text-center">Miami, FLorida</h5>
+                                <h5 class="text-center">33192</h5>
+                                <h5 class="text-center">phone 7864084743</h5>
+                            </div>
+                            
+
+                           
+                          </div>
+                          <div *ngIf="!usuario.casillero" class="card-footer">
+                            <div class="stats">
+                              <button class="btn btn-block btn-danger text-center">Genera tu COdigo Casillero</button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-md-4">
+                        <div class="card card-chart">
+                          <div class="card-header card-header-info" data-header-animation="true">
+                            <h4>
+                              Cotizar
+                            </h4>
+                          </div>
+                          <div class="card-body">
+                            <div class="card-actions">
+                             
+                              <button type="button" class="btn btn-info btn-link" rel="tooltip" data-placement="bottom" title="Refresh">
+                                <i class="material-icons">refresh</i>
+                              </button>
+                              <button type="button" class="btn btn-default btn-link" rel="tooltip" data-placement="bottom" title="Change Date">
+                                <i class="material-icons">edit</i>
+                              </button>
+                            </div>
+                            <h4 class="card-title">No has cotizado aun!!</h4>
+                            
+                          </div>
+                          <div class="card-footer">
+                            <div class="stats">
+                              <i class="material-icons">access_time</i> para crear cotizaciones dale click en el lapiz
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+      

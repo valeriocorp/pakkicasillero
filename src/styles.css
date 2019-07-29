@@ -3626,3 +3626,16 @@
     transition: none !important;
   }
 }
+
+
+.img-50{
+  width: 50px;
+}
+.w70{
+  width: 70px;
+}
+
+.responsive {
+  width: 100%;
+  height: auto;
+}

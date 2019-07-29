@@ -7,13 +7,19 @@ import { PipesModule } from '../pipes/pipes.module';
 import { ProfileComponent } from './profile/profile.component';
 import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
+import { UsuariosComponent } from './usuarios/usuarios.component';
+import { PrealertasComponent } from './prealertas/prealertas.component';
+import { CalculaComponent } from './calcula/calcula.component';
 
 
 @NgModule({
     declarations:[
         PagesComponent,
         DashboardComponent,
-        ProfileComponent
+        ProfileComponent,
+        UsuariosComponent,
+        PrealertasComponent,
+        CalculaComponent
     ],
     exports:[
 
