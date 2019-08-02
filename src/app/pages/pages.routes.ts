@@ -4,6 +4,7 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { LoginGuardGuard } from '../services/guards/login-guard.guard';
 import { ProfileComponent } from './profile/profile.component';
 import { UsuariosComponent } from './usuarios/usuarios.component';
+import { PaquetesComponent } from './paquetes/paquetes.component';
 
 
 
@@ -30,6 +31,11 @@ const pagesRoutes:Routes = [
                 path:'usuarios',
                 component: UsuariosComponent,
                 data: {titulo:'Mantenimiento de usuarios'}
+            },
+            {
+                path:'paquetes',
+                component: PaquetesComponent,
+                data: {titulo:'Mantenimiento de paquetes'}
             },
             {
                 path:'',

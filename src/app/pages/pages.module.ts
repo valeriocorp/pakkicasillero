@@ -10,6 +10,7 @@ import { CommonModule } from '@angular/common';
 import { UsuariosComponent } from './usuarios/usuarios.component';
 import { PrealertasComponent } from './prealertas/prealertas.component';
 import { CalculaComponent } from './calcula/calcula.component';
+import { PaquetesComponent } from './paquetes/paquetes.component';
 
 
 @NgModule({
@@ -19,7 +20,8 @@ import { CalculaComponent } from './calcula/calcula.component';
         ProfileComponent,
         UsuariosComponent,
         PrealertasComponent,
-        CalculaComponent
+        CalculaComponent,
+        PaquetesComponent
     ],
     exports:[
 
