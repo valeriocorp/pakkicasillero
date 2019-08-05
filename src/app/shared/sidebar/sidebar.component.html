@@ -6,10 +6,10 @@
 -->
   <div class="logo">
     <a routerLink="/dashboard" class="simple-text logo-mini">
-      CT
+      PK
     </a>
     <a routerLink="/dashboard" class="simple-text logo-normal">
-      Creative Tim
+      Pakki
     </a>
   </div>
   <div class="sidebar-wrapper">
@@ -44,8 +44,14 @@
       </div>
     </div>
     <ul  class="nav">
+        <li *ngFor="let menu of sidebar.menu" class="nav-item ">
+            <a class="nav-link" [routerLink]="[menu.url]">
+              <i class="material-icons">{{menu.icono}}</i>
+              <p> {{menu.titulo}} </p>
+            </a>
+          </li>
    
-        <li *ngFor="let menu of sidebar.menu"  class="nav-item ">
+        <li *ngFor="let menu of sidebar.menu2"  class="nav-item ">
           <a  class="nav-link" data-toggle="collapse" href="#{{menu.titulo}}">
             <i class="material-icons">{{menu.icono}}</i>
             <p> {{menu.titulo}}

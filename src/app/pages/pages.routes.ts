@@ -5,6 +5,8 @@ import { LoginGuardGuard } from '../services/guards/login-guard.guard';
 import { ProfileComponent } from './profile/profile.component';
 import { UsuariosComponent } from './usuarios/usuarios.component';
 import { PaquetesComponent } from './paquetes/paquetes.component';
+import { PrealertasComponent } from './prealertas/prealertas.component';
+import { CalculaComponent } from './calcula/calcula.component';
 
 
 
@@ -25,6 +27,17 @@ const pagesRoutes:Routes = [
                 component: ProfileComponent,
                 data: {titulo:'Perfil de usuario Pakki'}
             },
+            {
+                path:'pre-alerta',
+                component: PrealertasComponent,
+                data: {titulo:'Formulario prealertas'}
+            },
+            {
+                path:'cotiza',
+                component: CalculaComponent,
+                data: {titulo:'Formulario cotizacion'}
+            },
+            
             
             //mantenimientos
             {

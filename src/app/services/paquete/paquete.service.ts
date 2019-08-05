@@ -27,6 +27,7 @@ export class PaqueteService {
 
 
         this.totalPaquetes = resp.total;
+        
         return resp.paquetes;
       }))
   }
@@ -86,13 +87,15 @@ export class PaqueteService {
   actualizarPaquete(paquete: Paquete){
 
 
-    let url = URL_SERVICIOS + '/paquetes/' + paquete._id;
+    let url = URL_SERVICIOS + '/paquete/' + paquete._id;
     url += '?token=' + this.usuarioService.token;
 
 
     return this.http.put(url,paquete).pipe(
       map((resp:any)=>{
-        resp.paquete
+        Swal.fire('Paquete actualizado','correctamente','success')
+        
+        return resp.paquete
       })
     )
 

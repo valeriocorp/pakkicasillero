@@ -9,35 +9,22 @@ export class SidebarService {
 
     {titulo: 'Principal',
     icono: 'description',
-    submenu: [
-      {titulo:'Dashboard', url: '/dashboard'},
-      {titulo:'prealerta', url: '/dashboard'},
-      {titulo:'calcula tu compra', url: '/dashboard'},
-  
-      
-    ]
+     url: '/dashboard',
   },
   {titulo: 'Pre-alerta',
   icono: 'alarm_on',
-  submenu: [
-    {titulo:'Dashboard', url: '/dashboard'},
-    {titulo:'prealerta', url: '/dashboard'},
-    {titulo:'calcula tu compra', url: '/dashboard'},
-
-    
-  ]
+  url: '/pre-alerta',
 },
 {titulo: 'Cotiza tu compra',
 icono: 'assignment',
-submenu: [
-  {titulo:'Dashboard', url: '/dashboard'},
-  {titulo:'prealerta', url: '/dashboard'},
-  {titulo:'calcula tu compra', url: '/dashboard'},
-
-  
-]
+url: '/cotiza'
 },
-  {
+  
+  ];
+
+  menu2 : any = [
+
+    {
     titulo:'mantenimiento',
     icono: 'build',
     submenu:[
@@ -54,7 +41,8 @@ submenu: [
       {titulo:'publicidad',
       url: '/publicidad'}
     ]
-  }
+  },
+
   ];
 
   constructor() { }

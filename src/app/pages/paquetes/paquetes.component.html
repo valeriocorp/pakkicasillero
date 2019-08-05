@@ -1,3 +1,96 @@
-<p>
-  paquetes works!
-</p>
+<div class="col-md-12">
+    <div class="card ">
+      <div class="card-header card-header-warning card-header-text">
+        <div class="card-icon">
+          <i class="material-icons">search</i>
+        </div>
+        <h4 class="card-title">Buscar Usuarios</h4>
+      </div>
+      <div class="card-body ">
+        <div class="form-group">
+          <input
+            #input
+            (keyup)="buscarPaquete( input.value )"
+            type="text"
+            class="form-control"
+            placeholder="Buscar Paquetes...."/>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+
+
+  	<div class="row">
+    <div class="col-12">
+      <div class="card">
+        <div class="card-body">
+          
+          <div class="text-right">
+              <button class="btn btn-warning btn-round mt-4" type="submit">
+               <i class="fa fa-plus"></i> Crear paquete
+              </button>
+          </div>
+
+          <h3 class="card-title">paquetes registrados (<small>{{paqueteService.totalPaquetes}}</small>)</h3>
+
+          <table class="table table-hover">
+            
+                <thead>
+                  <tr>
+                    <th>Factura</th>
+                    <th>Compra</th>
+                    <th>tracking</th>
+                    <th>Status</th>
+                    <th></th>
+                  </tr>
+
+                </thead>
+
+                <tbody>
+                    <tr *ngFor="let paquete of paquetes">
+                        <td>
+                          <img [src]="paquete.factura | imagen:'paquete'" class="img-50 img-circle pointer">
+                        </td>
+                        <td>
+                                <input [(ngModel)]="paquete.compra" name="compra" type="text" class="form-control" placeholder="Nombre del Articulo...">
+                        </td>
+                        <td>
+                            <input [(ngModel)]="paquete.tracking" name="tracking" type="text" class="form-control" placeholder="tracking del Articulo...">
+                        </td>
+                        <td>
+                            <input [(ngModel)]="paquete.status" name="compra" type="text" class="form-control" placeholder="status del Articulo...">
+                        </td>
+                        <td class="td-actions text-right">
+                            <button
+                            (click)="guardarPaquete(paquete)"
+                             type="button"
+                              rel="tooltip"
+                               class="btn btn-info">
+                              <i class="material-icons">person</i>
+                            </button>
+                            <button
+                          
+                              type="button"
+                              rel="tooltip"
+                              class="btn btn-success"
+                            >
+                              <i class="material-icons">edit</i>
+                            </button>
+                            <button
+                            (click)="borrarPaquete(paquete)"
+                              type="button"
+                              rel="tooltip"
+                              class="btn btn-danger"
+                            >
+                              <i class="material-icons">close</i>
+                            </button>
+                          </td>
+                      </tr>
+
+                </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
