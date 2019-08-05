@@ -11,6 +11,7 @@ import { UsuariosComponent } from './usuarios/usuarios.component';
 import { PrealertasComponent } from './prealertas/prealertas.component';
 import { CalculaComponent } from './calcula/calcula.component';
 import { PaquetesComponent } from './paquetes/paquetes.component';
+import { ModalUploadComponent } from '../components/modal-upload/modal-upload.component';
 
 
 @NgModule({
@@ -21,7 +22,8 @@ import { PaquetesComponent } from './paquetes/paquetes.component';
         UsuariosComponent,
         PrealertasComponent,
         CalculaComponent,
-        PaquetesComponent
+        PaquetesComponent,
+        ModalUploadComponent
     ],
     exports:[
 

@@ -27,6 +27,17 @@ export class UsuariosComponent implements OnInit {
 
   ngOnInit() {
     this.cargarUsuarios();
+
+    this.modal.notificacion
+            .subscribe((resp:any)=>{
+              this.cargarUsuarios();
+            })
+  }
+
+  mostrarModal(id:string){
+
+    this.modal.mostrarModal('usuarios',id);
+
   }
 
 
@@ -139,23 +150,6 @@ export class UsuariosComponent implements OnInit {
         this.modal.notificacion.emit(resp);
       })
 
-  }
-  seleccionImagen(archivo: File){
-
-    if (!archivo) {
-
-      this.imagenSubir = null;
-      return;
-      
-    }
-
-    if (archivo.type.indexOf('image') < 0 ) {
-      Swal.fire('Solo imagnes por favor','El archivo seleccionado no es una iagen', 'error' );
-      this.imagenSubir = null;
-      return;
-    }
-
-   this.imagenSubir = archivo;
   }
 
 }
