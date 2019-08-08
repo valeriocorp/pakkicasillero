@@ -8,7 +8,7 @@ export class Paquete {
       public  tienda:  string,
       public  numeroOrden:  string,
       public  cantidad:  string,
-
+      public usuario?:  object,
       public  empresa?:  string, 
       public  tracking?:  string,
       public  compra?: string, 

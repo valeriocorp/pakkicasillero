@@ -27,7 +27,7 @@
         <div class="card-body">
           
           <div class="text-right">
-              <button class="btn btn-warning btn-round mt-4" type="submit">
+              <button [routerLink]="['/paquete','nuevo']" class="btn btn-warning btn-round mt-4" type="submit">
                <i class="fa fa-plus"></i> Crear paquete
               </button>
           </div>
@@ -42,6 +42,7 @@
                     <th>Compra</th>
                     <th>tracking</th>
                     <th>Status</th>
+                    <th>Usuario</th>
                     <th></th>
                   </tr>
 
@@ -61,6 +62,9 @@
                         <td>
                             <input [(ngModel)]="paquete.status" name="compra" type="text" class="form-control" placeholder="status del Articulo...">
                         </td>
+                        <td>
+                          {{paquete.usuario.email}}
+                        </td>
                         <td class="td-actions text-right">
                             <button
                             (click)="guardarPaquete(paquete)"
@@ -70,7 +74,7 @@
                               <i class="material-icons">person</i>
                             </button>
                             <button
-                          
+                            [routerLink]="['/paquete', paquete._id]"
                               type="button"
                               rel="tooltip"
                               class="btn btn-success"

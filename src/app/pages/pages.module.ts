@@ -12,6 +12,7 @@ import { PrealertasComponent } from './prealertas/prealertas.component';
 import { CalculaComponent } from './calcula/calcula.component';
 import { PaquetesComponent } from './paquetes/paquetes.component';
 import { ModalUploadComponent } from '../components/modal-upload/modal-upload.component';
+import { PaqueteComponent } from './paquetes/paquete.component';
 
 
 @NgModule({
@@ -23,7 +24,8 @@ import { ModalUploadComponent } from '../components/modal-upload/modal-upload.co
         PrealertasComponent,
         CalculaComponent,
         PaquetesComponent,
-        ModalUploadComponent
+        ModalUploadComponent,
+        PaqueteComponent
     ],
     exports:[
 

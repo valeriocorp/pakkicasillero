@@ -1,0 +1,173 @@
+<div class="content">
+  <div class="container-fluid">
+    <div class="row">
+
+      <div class="col-md-6">
+        <div class="card ">
+          <div class="card-header card-header-warning card-header-icon">
+            <div class="card-icon">
+              <i class="material-icons">add_shopping_cart</i>
+            </div>
+            <h4 class="card-title">Crear/Actualizar Paquete</h4>
+          </div>
+          <div class="card-body ">
+            <form #f="ngForm" ngNativeValidate (ngSubmit)="guardarPaquete()">
+
+
+                <div class="row">
+                    <label  class="col-md-3 col-form-label">Servicio</label>
+                    <div class="col-md-9">
+                      <div class="form-group has-default">
+                    <select name="" class="form-control" required>
+                      <option value="">Seleccione un Servicio</option>
+                    </select>
+                  </div>
+                  </div>
+                  </div>
+
+
+
+                  <div class="row">
+                      <label  class="col-md-3 col-form-label">Tienda</label>
+                      <div class="col-md-9">
+                        <div class="form-group has-default">
+                      <select name="" class="form-control" required>
+                        <option value="">Seleccione una Tienda</option>
+                      </select>
+                    </div>
+                    </div>
+                    </div>
+
+
+
+                    <div class="row">
+                        <label  class="col-md-3 col-form-label">Empresa Envio</label>
+                        <div class="col-md-9">
+                            <div class="form-group has-default">
+                        <select name="" class="form-control" required>
+                            <option value="">Seleccione una Empresa de envio</option>
+                          </select>
+                      </div></div></div>
+
+
+                      <div class="row">
+                          <label class="col-md-3 col-form-label">Numero de orden</label>
+                          <div class="col-md-9">
+                              <div class="form-group has-default">
+                          <input type="text" class="form-control" required>
+                        </div>
+                        </div>
+                        </div>
+
+
+
+              <div class="row">
+                  <label class="col-md-3 col-form-label">Numero de tracking</label>
+                  <div class="col-md-9">
+                      <div class="form-group has-default">
+                  <input type="text" class="form-control" required>
+                </div>
+                </div>
+                </div>
+
+
+
+
+                <div class="row">
+                    <label  class="col-md-3 col-form-label">Cantidad de articulos</label>
+                    <div class="col-md-9">
+                        <div class="form-group has-default">
+                    <input type="text" class="form-control" required>
+                  </div></div></div>
+
+
+                  <div class="row">
+                      <label  class="col-md-3 col-form-label">Tipo de articulo</label>
+                      <div class="col-md-9">
+                          <div class="form-group has-default">
+                      <input type="text" class="form-control" required>
+                    </div></div></div>
+
+
+                    <div class="row">
+                        <label  class="col-md-3 col-form-label">Fecha entrega</label>
+                        <div class="col-md-9">
+                            <div class="form-group has-default">
+                        <input type="text" class="form-control" >
+                      </div></div></div>
+
+
+                      <div class="row">
+                          <label  class="col-md-3 col-form-label">Valor de articulo</label>
+                          <div class="col-md-9">
+                              <div class="form-group has-default">
+                          <input type="text" class="form-control" required>
+                        </div></div></div>
+
+
+                        <div class="row">
+                            <label  class="col-md-3 col-form-label">Total envio</label>
+                            <div class="col-md-9">
+                                <div class="form-group has-default">
+                            <input type="text" class="form-control" >
+                          </div></div></div>
+
+
+                          <div class="row">
+                              <label  class="col-md-3 col-form-label">Nota:</label>
+                              <div class="col-md-9">
+                                  <div class="form-group has-default">
+                              <input type="text" class="form-control" >
+                            </div></div></div>
+
+
+                            <div class="row">
+                                <label  class="col-md-3 col-form-label">Status</label>
+                                <div class="col-md-9">
+                                  <div class="form-group has-default">
+                                <select name="" class="form-control" required>
+                                  <option value="">Status</option>
+                                </select>
+                              </div>
+                              </div>
+                              </div>
+
+
+           
+
+
+                              <div class="row">
+                                  <button type="submit" class="btn btn-fill btn-warning">Crear/Actualizar</button>
+
+                                  <div class="">
+                                      <button routerLink="/paquetes" class="btn btn-fill btn-rose">Cancelar</button>
+                                    </div>
+
+                                </div>
+
+                                
+
+            </form>
+          </div>
+         
+        </div>
+      </div>
+
+      <div class="col-md-6">
+          <div class="card">
+              <div class="card-header card-header-warning card-header-icon">
+                  <div class="card-icon">
+                    <i class="material-icons">account_box</i>
+                  </div>
+                  <h4 class="card-title">Usuario a quien pertenece</h4>
+                </div>
+            <div class="card-body">
+              This is some text within a card block.
+            </div>
+          </div>
+        </div>
+
+
+    </div>
+  </div>
+</div>

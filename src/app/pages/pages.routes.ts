@@ -7,6 +7,7 @@ import { UsuariosComponent } from './usuarios/usuarios.component';
 import { PaquetesComponent } from './paquetes/paquetes.component';
 import { PrealertasComponent } from './prealertas/prealertas.component';
 import { CalculaComponent } from './calcula/calcula.component';
+import { PaqueteComponent } from './paquetes/paquete.component';
 
 
 
@@ -36,6 +37,11 @@ const pagesRoutes:Routes = [
                 path:'cotiza',
                 component: CalculaComponent,
                 data: {titulo:'Formulario cotizacion'}
+            },
+            {
+                path:'paquete/:id',
+                component: PaqueteComponent,
+                data: {titulo:'crear paquetes'}
             },
             
             
