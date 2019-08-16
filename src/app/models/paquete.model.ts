@@ -11,7 +11,7 @@ export class Paquete {
       public usuario?:  object,
       public  empresa?:  string, 
       public  tracking?:  string,
-      public  compra?: string, 
+      public  compra?: boolean, 
       public  tipoProducto?:  string,
       public  factura?:  string,
       public  entrega?: string,

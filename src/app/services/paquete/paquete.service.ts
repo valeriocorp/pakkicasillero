@@ -5,6 +5,7 @@ import { map } from 'rxjs/operators';
 import { UsuarioService } from '../usuario/usuario.service';
 import Swal from 'sweetalert2';
 import { Paquete } from '../../models/paquete.model';
+import { Router } from '@angular/router';
 
 @Injectable({
   providedIn: 'root'
@@ -14,7 +15,8 @@ export class PaqueteService {
   totalPaquetes: number = 0;
 
   constructor(public http: HttpClient,
-    public usuarioService:UsuarioService) { }
+    public usuarioService:UsuarioService,
+    public router:Router) { }
 
 
 
@@ -58,16 +60,19 @@ export class PaqueteService {
   }
 
 
-  crearPaquete(nombre:string){
+  crearPaquete(paquete:Paquete){
 
-    let url = URL_SERVICIOS + '/paquete/';
+    let url = URL_SERVICIOS + '/paquete';
     url += '?token=' + this.usuarioService.token;
 
-    return this.http.post(url,{nombre})
+    return this.http.post(url,paquete)
       .pipe(
         map((resp:any)=>{
 
-          resp.paquete
+          Swal.fire('Paquete Creado','correctamente','success')
+          
+          
+         return resp.paquete
         })
       )
 

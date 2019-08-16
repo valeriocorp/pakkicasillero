@@ -1,7 +1,7 @@
 <div class="content">
     <div class="container-fluid">
       <div class="row">
-        <div class="col-md-6">
+        <div class="col-md-12">
           <div class="card ">
             <div class="card-header card-header-warning card-header-icon">
               <div class="card-icon">
@@ -10,22 +10,30 @@
               <h4 class="card-title">Pre-Alerta</h4>
             </div>
             <div class="card-body ">
-              <form #f="ngForm" ngNativeValidate (ngSubmit)="guardarPreAlerta()">
-                  <div class="row">
+              <form ngNativeValidate [formGroup]="forma" (ngSubmit)="guardarPreAlerta()">
+                 
+                
+                
+                <div class="row">
                       <label  class="col-md-3 col-form-label">Tienda</label>
                       <div class="col-md-9">
                         <div class="form-group has-default">
-                      <select name="" class="form-control" required>
+          
+                      <select formControlName="tienda" name="tienda" class="form-control select-css" required>
                         <option value="">Seleccione una Tienda</option>
+                        <option *ngFor="let tienda of tiendas" [value]="tienda.nombre">
+                          {{tienda.nombre}}
+                        </option>
                       </select>
                     </div>
                     </div>
                     </div>
+                    
                     <div class="row">
                       <label class="col-md-3 col-form-label">Numero de tracking</label>
                       <div class="col-md-9">
                           <div class="form-group has-default">
-                      <input type="text" class="form-control" required >
+                      <input formControlName="tracking" name="tracking" type="text" class="form-control" required >
                     </div>
                     </div>
                     </div>
@@ -34,8 +42,11 @@
                       <label  class="col-md-3 col-form-label">Empresa Envio</label>
                       <div class="col-md-9">
                           <div class="form-group has-default">
-                      <select name="" class="form-control" required>
+                      <select formControlName="empresa" name="empresa" class="form-control select-css" required>
                           <option value="">Seleccione una Empresa de envio</option>
+                          <option *ngFor="let empresa of empresaEmvios" [value]="empresa.nombre">
+                            {{empresa.nombre}}
+                          </option>
                         </select>
                     </div></div></div>
 
@@ -43,21 +54,29 @@
                       <label  class="col-md-3 col-form-label">Tipo de articulo</label>
                       <div class="col-md-9">
                           <div class="form-group has-default">
-                      <input type="text" class="form-control" required >
+                      <input formControlName="tipoProducto" name="tipoProducto"  type="text" class="form-control" required >
                     </div></div></div>
 
                     <div class="row">
                         <label  class="col-md-3 col-form-label">Cantidad de articulos</label>
                         <div class="col-md-9">
                             <div class="form-group has-default">
-                        <input type="text" class="form-control" required>
+                        <input formControlName="cantidad" name="cantidad" type="number" class="form-control" required>
+                      </div></div></div>
+
+                      <div class="row">
+                        <label for="exampleFormControlFile2" class="col-md-3  btn btn-danger">Subir archivo</label>
+                        <div class="col-md-9">
+                            <div class="form-group has-default">
+                              
+                        <input formControlName="factura" name="factura" type="file" class="form-control-file " id="exampleFormControlFile2">
                       </div></div></div>
 
                     <div class="row">
                       <label  class="col-md-3 col-form-label">Nota:</label>
                       <div class="col-md-9">
                           <div class="form-group has-default">
-                      <input type="text" class="form-control" >
+                      <input formControlName="nota" name="nota" type="text" class="form-control" >
                     </div></div></div>
 
                     <div class="row ">
@@ -78,19 +97,7 @@
           </div>
         </div>
 
-        <div class="col-md-6">
-            <div class="card">
-                <div class="card-header card-header-warning card-header-icon">
-                    <div class="card-icon">
-                      <i class="material-icons">assignment</i>
-                    </div>
-                    <h4 class="card-title">Factura</h4>
-                  </div>
-              <div class="card-body">
-                This is some text within a card block.
-              </div>
-            </div>
-          </div>
+       
        
       </div>
       

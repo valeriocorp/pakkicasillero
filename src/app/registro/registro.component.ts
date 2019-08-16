@@ -78,6 +78,7 @@ export class RegistroComponent implements OnInit {
       
     }
     let usuario = new Usuario(
+      
       this.forma.value.nombre,
       this.forma.value.apellido,
       this.forma.value.telefono,
