@@ -11,7 +11,7 @@ import { StatusService } from '../../services/reglas/status.service';
 import { Paquete } from '../../models/paquete.model';
 import { PaqueteService } from '../../services/paquete/paquete.service';
 import { Usuario } from 'src/app/models/usuario.model';
-import { Router } from '@angular/router';
+import { Router,ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-paquete',
@@ -32,7 +32,19 @@ export class PaqueteComponent implements OnInit {
               public tiendaService:TiendaService,
               public statusService:StatusService,
               public paqueteService:PaqueteService,
-              public router:Router) { }
+              public router:Router,
+              public activatedRoute:ActivatedRoute) {
+
+                activatedRoute.params.subscribe(params =>{
+                  let id = params['id'];
+
+                  if (id !== 'nuevo' ) {
+
+                    this.obtenerPaquete(id);
+                    
+                  }
+                })
+               }
 
   ngOnInit() {
     this.servicioService.cargarServicios()
@@ -65,6 +77,19 @@ export class PaqueteComponent implements OnInit {
         console.log(paquete);
       })
 
+
+  }
+
+
+  obtenerPaquete(id:string){
+
+    this.paqueteService.obtenerPaquete(id)
+    .subscribe(paquete => {
+      
+      console.log(paquete);
+      this.paquete = paquete;
+      
+    });
 
   }
 

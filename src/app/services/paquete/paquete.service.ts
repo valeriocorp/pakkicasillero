@@ -40,7 +40,7 @@ export class PaqueteService {
     return this.http.get(url).pipe(
       map ((resp:any) =>{
         
-        resp.paquete
+       return resp.paquete
       }))
   }
 
@@ -63,18 +63,39 @@ export class PaqueteService {
   crearPaquete(paquete:Paquete){
 
     let url = URL_SERVICIOS + '/paquete';
-    url += '?token=' + this.usuarioService.token;
 
-    return this.http.post(url,paquete)
-      .pipe(
-        map((resp:any)=>{
+    if (paquete._id) {
+//actualizar
+url += '/' + paquete._id;
+url += '?token=' + this.usuarioService.token;
 
-          Swal.fire('Paquete Creado','correctamente','success')
-          
-          
-         return resp.paquete
-        })
-      )
+
+    return this.http.put(url,paquete).pipe(
+      map((resp:any)=>{
+        Swal.fire('Paquete actualizado','correctamente','success')
+        
+        return resp.paquete
+      })
+    )
+
+      
+    }else{
+//crear
+url += '?token=' + this.usuarioService.token;
+
+return this.http.post(url,paquete)
+  .pipe(
+    map((resp:any)=>{
+
+      Swal.fire('Paquete Creado','correctamente','success')
+      
+      
+     return resp.paquete
+    })
+  )
+    }
+   
+
 
   }
 
