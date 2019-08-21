@@ -1,0 +1,32 @@
+<div class="row">
+
+  <div class="col-12 text-center">
+
+    <div class="card">
+        <div class="card-body">
+
+          <h4 class="card-title">Paquetes</h4>
+
+          <table class="table table-hover" *ngIf="paquete.length > 0">
+
+            <tbody>
+              <tr *ngFor="let articulo of paquete">
+                <td>Factura</td>
+                <td>{{articulo.tracking}}</td>
+                <td>{{articulo.status}}</td>
+              </tr>
+
+            </tbody>
+
+
+          </table>
+
+          <div class="alert alert-info" *ngIf="paquete.length === 0">
+                No hay paquetes con este numero de tracking
+          </div>
+
+        </div>
+    </div>
+  </div>
+
+</div>

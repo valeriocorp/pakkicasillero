@@ -15,6 +15,7 @@ import { ModalUploadComponent } from '../components/modal-upload/modal-upload.co
 import { PaqueteComponent } from './paquetes/paquete.component';
 import { TerminosComponent } from './terminos/terminos.component';
 import { TratamientoComponent } from './tratamiento/tratamiento.component';
+import { BusquedaComponent } from './busqueda/busqueda.component';
 
 
 @NgModule({
@@ -29,7 +30,8 @@ import { TratamientoComponent } from './tratamiento/tratamiento.component';
         ModalUploadComponent,
         PaqueteComponent,
         TerminosComponent,
-        TratamientoComponent
+        TratamientoComponent,
+        BusquedaComponent
     ],
     exports:[
 

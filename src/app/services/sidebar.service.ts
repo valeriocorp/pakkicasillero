@@ -1,4 +1,5 @@
 import { Injectable } from '@angular/core';
+import { UsuarioService } from './usuario/usuario.service';
 
 @Injectable({
   providedIn: 'root'
@@ -22,28 +23,15 @@ url: '/cotiza'
   
   ];
 
-  menu2 : any = [
+ menu2 : any[] = [];
 
-    {
-    titulo:'mantenimiento',
-    icono: 'build',
-    submenu:[
-      {titulo:'usuarios',
-       url: '/usuarios'
-      },
-      {titulo:'paquetes',
-      url: '/paquetes'
-    },
-      {titulo:'reglas',
-      url: '/reglas'},
-      {titulo:'envios',
-      url: '/envios'},
-      {titulo:'publicidad',
-      url: '/publicidad'}
-    ]
-  },
+  constructor(public usuarioService:UsuarioService) {
+    
+   }
 
-  ];
 
-  constructor() { }
+   cargarMenu(){
+    this.menu2 = this.usuarioService.menu;
+
+   }
 }

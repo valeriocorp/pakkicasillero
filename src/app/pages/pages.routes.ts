@@ -8,6 +8,8 @@ import { PaquetesComponent } from './paquetes/paquetes.component';
 import { PrealertasComponent } from './prealertas/prealertas.component';
 import { CalculaComponent } from './calcula/calcula.component';
 import { PaqueteComponent } from './paquetes/paquete.component';
+import { BusquedaComponent } from './busqueda/busqueda.component';
+import { AdminGuard } from '../services/guards/admin.guard';
 
 
 
@@ -39,21 +41,31 @@ const pagesRoutes:Routes = [
                 data: {titulo:'Formulario cotizacion'}
             },
             {
-                path:'paquete/:id',
-                component: PaqueteComponent,
-                data: {titulo:'crear paquetes'}
+                path:'busqueda/:termino',
+                component: BusquedaComponent,
+                data: {titulo:'busqueda de paquetes'}
             },
             
+          
             
             //mantenimientos
             {
+                path:'paquete/:id',
+                component: PaqueteComponent,
+                canActivate:[AdminGuard],
+                data: {titulo:'crear paquetes'}
+            },
+            
+            {
                 path:'usuarios',
                 component: UsuariosComponent,
+                canActivate:[AdminGuard],
                 data: {titulo:'Mantenimiento de usuarios'}
             },
             {
                 path:'paquetes',
                 component: PaquetesComponent,
+                canActivate:[AdminGuard],
                 data: {titulo:'Mantenimiento de paquetes'}
             },
             {
