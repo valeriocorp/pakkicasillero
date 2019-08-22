@@ -20,14 +20,14 @@ import { BusquedaComponent } from './busqueda/busqueda.component';
 
 @NgModule({
     declarations:[
-        PagesComponent,
+       // PagesComponent,
         DashboardComponent,
         ProfileComponent,
         UsuariosComponent,
         PrealertasComponent,
         CalculaComponent,
         PaquetesComponent,
-        ModalUploadComponent,
+      //  ModalUploadComponent,
         PaqueteComponent,
         TerminosComponent,
         TratamientoComponent,

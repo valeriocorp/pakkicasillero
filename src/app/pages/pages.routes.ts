@@ -10,20 +10,17 @@ import { CalculaComponent } from './calcula/calcula.component';
 import { PaqueteComponent } from './paquetes/paquete.component';
 import { BusquedaComponent } from './busqueda/busqueda.component';
 import { AdminGuard } from '../services/guards/admin.guard';
+import { VerificaTokenGuard } from '../services/guards/verifica-token.guard';
 
 
 
 const pagesRoutes:Routes = [
 
 
-    {
-        path:'',
-        component: PagesComponent,
-        canActivate:[LoginGuardGuard],
-        children:[
             {
                 path:'dashboard',
-                component: DashboardComponent
+                component: DashboardComponent,
+                canActivate:[VerificaTokenGuard]
             },
             {
                 path:'perfil',
@@ -74,8 +71,7 @@ const pagesRoutes:Routes = [
                 pathMatch: 'full'
             },
 
-        ]
-    },
+  
 
 ];
 

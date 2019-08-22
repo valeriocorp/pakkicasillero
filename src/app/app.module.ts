@@ -11,6 +11,8 @@ import { RegistroComponent } from './registro/registro.component';
 import { PagesModule } from './pages/pages.module';
 import { LrnavbarComponent } from './lrnavbar/lrnavbar.component';
 import { HttpClientModule } from '@angular/common/http';
+import { PagesComponent } from './pages/pages.component';
+import { SharedModule } from './shared/shared.module';
 
 
 
@@ -21,17 +23,19 @@ import { HttpClientModule } from '@angular/common/http';
     LoginComponent,
     RegistroComponent,
     LrnavbarComponent,
+    PagesComponent
    
     
   ],
   imports: [
     BrowserModule,
     APP_ROUTES,
-    PagesModule,
+   //PagesModule,
     FormsModule,
     ReactiveFormsModule,
     HttpClientModule,
-    CommonModule
+    CommonModule,
+    SharedModule
   ],
   providers: [],
   bootstrap: [AppComponent]
