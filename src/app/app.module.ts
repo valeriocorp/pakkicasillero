@@ -13,6 +13,8 @@ import { LrnavbarComponent } from './lrnavbar/lrnavbar.component';
 import { HttpClientModule } from '@angular/common/http';
 import { PagesComponent } from './pages/pages.component';
 import { SharedModule } from './shared/shared.module';
+import { ContrasenaComponent } from './login/contrasena/contrasena.component';
+import { RestablecerPassComponent } from './pages/restablecer-pass/restablecer-pass.component';
 
 
 
@@ -23,7 +25,9 @@ import { SharedModule } from './shared/shared.module';
     LoginComponent,
     RegistroComponent,
     LrnavbarComponent,
-    PagesComponent
+    PagesComponent,
+    ContrasenaComponent,
+    RestablecerPassComponent
    
     
   ],

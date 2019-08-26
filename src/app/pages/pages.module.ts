@@ -18,6 +18,7 @@ import { TratamientoComponent } from './tratamiento/tratamiento.component';
 import { BusquedaComponent } from './busqueda/busqueda.component';
 
 
+
 @NgModule({
     declarations:[
        // PagesComponent,
@@ -31,7 +32,8 @@ import { BusquedaComponent } from './busqueda/busqueda.component';
         PaqueteComponent,
         TerminosComponent,
         TratamientoComponent,
-        BusquedaComponent
+        BusquedaComponent,
+        
     ],
     exports:[
 

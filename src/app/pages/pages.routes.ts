@@ -11,6 +11,7 @@ import { PaqueteComponent } from './paquetes/paquete.component';
 import { BusquedaComponent } from './busqueda/busqueda.component';
 import { AdminGuard } from '../services/guards/admin.guard';
 import { VerificaTokenGuard } from '../services/guards/verifica-token.guard';
+import { RestablecerPassComponent } from './restablecer-pass/restablecer-pass.component';
 
 
 
@@ -27,6 +28,7 @@ const pagesRoutes:Routes = [
                 component: ProfileComponent,
                 data: {titulo:'Perfil de usuario Pakki'}
             },
+         
             {
                 path:'pre-alerta',
                 component: PrealertasComponent,
